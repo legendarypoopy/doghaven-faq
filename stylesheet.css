@@ -254,10 +254,12 @@ nav ul li:last-child {
   padding: 0% 6% 0% 6%;
   color: var(--clr_primary);
   font-weight: bold;
+  font-size: var(--font_m);
   cursor: pointer;
 }
 .faq_container .answer {
   padding: 3% 6% 0% 6%;
+  font-size: var(--font_m);
   display: none;
 }
 .expand {
