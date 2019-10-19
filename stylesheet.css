@@ -248,6 +248,8 @@ nav ul li:last-child {
 .faq {
   padding: 0 0 8% 0;  
 }
+
+/* QN1 */
 .faq_container .qn1 {
   margin: 0 5%;
   padding: 4% 1% 4% 1%;
@@ -269,6 +271,31 @@ nav ul li:last-child {
   /* display: none; */
 }
 .contract1 {
+  display: none;
+}
+
+/* QN2 */
+.faq_container .qn2 {
+  margin: 0 5%;
+  padding: 4% 1% 4% 1%;
+  color: var(--clr_primary);
+  font-weight: bold;
+  font-size: var(--font_m);
+  cursor: pointer;
+  /* background: pink; */
+}
+.faq_container .qn2:hover {
+  background: white;
+}
+.faq_container .answer2 {
+  padding: 0% 6% 0% 6%;
+  font-size: var(--font_m);
+  display: none;
+}
+.expand2 {
+  /* display: none; */
+}
+.contract2 {
   display: none;
 }
 
