@@ -137,7 +137,7 @@ nav ul li:last-child {
   background-color: var(--clr_primary);
   /* height: 330px; */
   /* height: 40vh; */
-  background-image: url("IMG/salon1.JPG");
+  /* background-image: url("IMG/salon1.JPG"); */
   background-repeat: no-repeat;
   background-size: 120%;
   transform: rotate(-0.32deg);
@@ -176,14 +176,12 @@ nav ul li:last-child {
   padding: 10% 6% 0 6%;
 }
 .intro h1 {
-  color: var(--clr_accent);
+  color: var(--clr_light);
   padding: 14% 6% 3% 6%;
 }
 .intro p {
   padding: 3% 6% 10% 6%;
-
-  /* Font size, family, height to adjust in Typography. Only adjust the color below as default is --clr_accent */
-  color: var(--clr_accent);
+  color: var(--clr_light);
 }
 /* Button 2 style: White text and perimeter */
 .btn2 {
@@ -241,7 +239,7 @@ nav ul li:last-child {
 
 
 
-/* MOBILE SECTION: Footer  */
+/* MOBILE SECTION: QUESTIONS & ANSWERS  */
 .faq_container {
   background: var(--clr_shade);
   /* bottom padding reduced by faq (8% bottom padding) to achieve 16% for both top and bottom */
@@ -250,22 +248,22 @@ nav ul li:last-child {
 .faq {
   padding: 0 0 8% 0;  
 }
-.faq_container .qn {
-  padding: 0% 6% 0% 6%;
+.faq_container .qn1 {
+  padding: 6% 6% 6% 6%;
   color: var(--clr_primary);
   font-weight: bold;
   font-size: var(--font_m);
   cursor: pointer;
 }
-.faq_container .answer {
-  padding: 3% 6% 0% 6%;
+.faq_container .answer1 {
+  padding: 0% 6% 0% 6%;
   font-size: var(--font_m);
-  display: none;
-}
-.expand {
   /* display: none; */
 }
-.contract {
+.expand1 {
+  /* display: none; */
+}
+.contract1 {
   display: none;
 }
 
