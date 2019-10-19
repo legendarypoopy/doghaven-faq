@@ -249,11 +249,16 @@ nav ul li:last-child {
   padding: 0 0 8% 0;  
 }
 .faq_container .qn1 {
-  padding: 6% 6% 6% 6%;
+  margin: 0 5%;
+  padding: 4% 1% 4% 1%;
   color: var(--clr_primary);
   font-weight: bold;
   font-size: var(--font_m);
   cursor: pointer;
+  /* background: pink; */
+}
+.faq_container .qn1:hover {
+  background: white;
 }
 .faq_container .answer1 {
   padding: 0% 6% 0% 6%;
