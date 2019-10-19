@@ -243,17 +243,17 @@ nav ul li:last-child {
 .faq_container {
   background: var(--clr_shade);
   /* bottom padding reduced by faq (8% bottom padding) to achieve 16% for both top and bottom */
-  padding: 16% 0 8% 0;
+  padding: 8% 0 8% 0;
 }
 .faq {
-  padding: 0 0 8% 0;  
+  padding: 2% 0 2% 0;  
 }
 
 /* QN1 */
 .faq_container .qn1 {
   margin: 0 5%;
-  padding: 4% 1% 4% 1%;
-  color: var(--clr_primary);
+  padding: 2% 1% 2% 1%;
+  /* color: var(--clr_primary); */
   font-weight: bold;
   /* font-size: var(--font_m); */
   cursor: pointer;
@@ -263,9 +263,10 @@ nav ul li:last-child {
   background: white;
 }
 .faq_container .answer1 {
-  padding: 0% 6% 0% 6%;
+  padding: 2% 6% 2% 6%;
   /* font-size: var(--font_m); */
   display: none;
+  /* background: lightpink; */
 }
 .expand1 {
   /* display: none; */
@@ -277,8 +278,8 @@ nav ul li:last-child {
 /* QN2 */
 .faq_container .qn2 {
   margin: 0 5%;
-  padding: 4% 1% 4% 1%;
-  color: var(--clr_primary);
+  padding: 2% 1% 2% 1%;
+  /* color: var(--clr_primary); */
   font-weight: bold;
   /* font-size: var(--font_m); */
   cursor: pointer;
@@ -288,7 +289,7 @@ nav ul li:last-child {
   background: white;
 }
 .faq_container .answer2 {
-  padding: 0% 6% 0% 6%;
+  padding: 2% 6% 2% 6%;
   /* font-size: var(--font_m); */
   display: none;
 }
