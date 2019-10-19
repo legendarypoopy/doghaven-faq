@@ -252,6 +252,7 @@ nav ul li:last-child {
 
 /*-------------------------------------------------------------------------------------------
   GROUP ALL QN+ANSWER CSS AS ONE CLASS: .qn_all, .expand_all, .contract_all, .answer__all CSS
+  EXCEPT: Answer1
   ------------------------------------------------------------------------------------------- */
 .faq_container .qn_all {
   margin: 0 5%;
@@ -285,6 +286,18 @@ nav ul li:last-child {
 .image_title {
   padding: 2% 6% 2% 6%;
   display: none;
+}
+
+
+/* MOBILE SECTION: IMPORTANT - Answer 1 to show on screen only */
+.expand1 {
+  display: none;
+}
+.contract1 {
+  /* display: none; */
+}
+.answer1 {
+  padding: 2% 6% 2% 6%;
 }
 
 
