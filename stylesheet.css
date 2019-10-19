@@ -1,0 +1,779 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --clr_primary: #8BCD2D;
+  /* --clr_accent: #4c4c4c; */
+  --clr_accent: #373D3F;
+  --clr_dark: black;
+  --clr_light: white;
+  --clr_shade: #F3F3F3;
+
+  --ff_title: 'Raleway', sans-serif;
+  --ff_serif: 'Open Sans', sans-serif;
+  /* --ff_title: 'Lato', sans-serif; */
+  /* --ff_title: 'Julius Sans One', sans-serif; */
+  /* --ff_title: 'Oswald', sans-serif; */
+  
+  --font_n: 1rem;
+  --font_s: 0.82rem;
+  --font_m: 1.3rem;
+  --font_l: 2.4rem;
+
+}
+
+/* => Standardized All Typograghy and Font size*/
+html{
+  /* box-sizing: ; */
+  font-family: var(--ff_serif);
+  color: var(--clr_accent);
+  font-size: var(--font_n);
+  /* font-weight: ; */
+}
+
+/* => Standardized All Typograghy and Font size*/
+h1 {
+  font-family: var(--ff_title);
+  font-size: var(--font_l);
+  line-height: var(--font_l);
+}
+h2 {
+  font-size: var(--font_m);
+}
+h3 {
+  /* font-family: var(--ff_title); */
+  font-size: var(--font_m);
+}
+p {
+  font-size: var(--font_n);
+}
+
+
+
+
+
+
+/* ==========================
+   START OF MOBILE MODE 
+   ========================== */
+
+/* MOBILE SECTION: NAVBAR */
+nav {
+  min-height: var(--font_n);
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  /* background: red; */
+  display: flex;
+  flex-direction: column;
+  /* background: orange; */
+  font-weight: 500;
+  }
+nav #logo {
+  background-color: var(--clr_shade);
+  height: 100px;
+  background-image: url("IMG/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* Cannot use margin bc this is background image, so will have a space when i add background color behind
+  so have to use background-position-x to align the logo  */
+  background-position-x: 13%;
+  display: none;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  font-size: calc(var(--font_m) * 1.7);
+  width: 100%;
+  display: none;
+}
+nav ul li {
+  background: var(--clr_shade);
+  list-style: none;
+  }
+nav ul li a {
+  color: var(--clr_accent);
+  text-shadow:
+		/* -1px -1px 0 rgba(255,255,255,0.5), */
+		1px -1px 0 rgba(255,255,255,0.5);
+		/* -1px 1px 0 rgba(255,255,255,0.5), */
+		/* 1px 1px 0 rgba(255,255,255,0.5); */
+  /* text-shadow: 0px 0px 30px white,0px 0px 30px white,0px 0px 30px white,0px 0px 10px white,0px 0px 10px white; */
+  display: block;
+  white-space: nowrap;
+  padding: 3% 6%;
+  text-decoration: none;
+  /* font-weight: 900; */
+}
+nav ul li a:hover {
+  color: var(--clr_primary);
+  background: rgba(255, 255, 255, 0.8);
+}
+/* This is to give extra white space at the top when toggle menu */
+nav ul li:first-child {
+  padding: 20% 0 0 0;
+}
+/* This is to give extra white space at the bottom to cover entire screen when toggle menu */
+nav ul li:last-child {
+  padding: 0 0 100% 0;
+}
+.menu_toggle {
+  position: absolute;
+  /* display: none; */
+  padding: 6px 11px;
+  background: var(--clr_light);
+  /* background: pink; */
+  color: var(--clr_accent);
+  font-size: var(--font_m);
+  top: 0;
+  right: 0;
+}
+
+
+/* MOBILE SECTION: OUR SALON */
+.divider1_image_on_mobile {
+  background-color: var(--clr_primary);
+  /* height: 330px; */
+  /* height: 40vh; */
+  background-image: url("IMG/salon1.JPG");
+  background-repeat: no-repeat;
+  background-size: 120%;
+  transform: rotate(-0.32deg);
+  /* Adjust image left/right */
+  background-position-x: center;
+  /* Adjust image left/right/top/bottom */
+  background-position-y: center;
+}
+.intro {
+  width: 100%;
+  height: auto;
+
+  /* IMPTT NOTE: Do NOT add padding here to make standardized top/bottom/left/right gap (in this div)! 
+  Else it will create a white line on the extreme right of phone due to the padding pushing on the right side. 
+  All paddings (to do in )top/bottom/left/right) to do in h1, h2, p  etc */
+  
+  background: var(--clr_primary);
+
+    /* Image position and size adjustment */
+    /* background-image: url("GR1.jpg"); */
+    /* background-repeat: no-repeat; */
+    /* background-size: 32%; */
+    /* Adjust image left/right */
+    /* background-position-x: 85%; */
+    /* Adjust image left/right/top/bottom */
+    /* background-position-y: bottom; */
+    /* background-position-y: right; */
+
+    /* background-position: 400px 100px; */ 
+    /* background-size: cover; */
+}
+.intro .intro_text {
+  width: 100%;
+}
+.intro .expert {
+  padding: 10% 6% 0 6%;
+}
+.intro h1 {
+  color: var(--clr_accent);
+  padding: 14% 6% 3% 6%;
+}
+.intro p {
+  padding: 3% 6% 10% 6%;
+
+  /* Font size, family, height to adjust in Typography. Only adjust the color below as default is --clr_accent */
+  color: var(--clr_accent);
+}
+/* Button 2 style: White text and perimeter */
+.btn2 {
+  font-size: var(--font_n);
+  padding: 0 15px;
+  border-radius: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid var(--clr_accent);
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr_accent);
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  transition: .3s;
+
+/* Gap adjustment (top,left/right only, but not bottomn because that one is adjust fr intro div -> padding: top/bottom) for button */
+  margin: 4% 5% 15% 6%;
+
+/* Below not required after i added padding to give equal left and right spacing regardless of text length */
+  /* width: 110px;
+  height: 25px; */
+}
+.btn2:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: var(--clr_primary);
+  top: -100%;
+  left: 0;
+  z-index: -1;
+  transition: .3s;
+}
+.btn2:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: var(--clr_primary);
+  top: -100%;
+  left: 0;
+  z-index: -1;
+  transition: .3s;
+}
+.btn2:hover {
+  color: var(--clr_dark);
+  border: 1px solid var(--clr_primary);
+  z-index: 1;
+}
+.btn2:hover:before {
+  top: 0;
+}
+
+
+
+/* MOBILE SECTION: Footer  */
+.faq_container {
+  background: var(--clr_shade);
+  /* bottom padding reduced by faq (8% bottom padding) to achieve 16% for both top and bottom */
+  padding: 16% 0 8% 0;
+}
+.faq {
+  padding: 0 0 8% 0;  
+}
+.faq_container .qn {
+  padding: 0% 6% 0% 6%;
+  color: var(--clr_primary);
+  font-weight: bold;
+  cursor: pointer;
+}
+.faq_container .answer {
+  padding: 3% 6% 0% 6%;
+  display: none;
+}
+.expand {
+  /* display: none; */
+}
+.contract {
+  display: none;
+}
+
+
+
+
+
+/* MOBILE SECTION: Footer  */
+footer {
+  width: 100%;
+  height: auto;
+  background: var(--clr_light);
+  /* color: var(--clr_accent); */
+  
+  /* IMPTT NOTE: Do NOT add padding here to make standardized top/bottom/left/right gap (in this div)! 
+  Else it will create a white line on the extreme right of phone due to the padding pushing on the right side. 
+  All paddings (to do in )top/bottom/left/right) to do in h1, h2, p  etc */
+}
+footer .info h1 {
+  padding: 10% 6% 0 6%;
+}
+footer .info h1 a {
+  color: var(--clr_accent);
+  text-decoration: none;
+}
+footer .info h1 a:hover {
+  color: var(--clr_primary);
+}
+.arrow {
+  display: none;
+}
+footer .info p {
+  /* Adjust only top and bottom. Left and right control in .recognition div */
+  padding: 1.5% 6% 0% 6%;
+  /* width: 88%; */
+}
+/* SPECIAL NOTE: For button gap adjustment (top/bottom/left/right), go to .btn3 -> Gap adjustment for button  */
+footer .copyright {
+  background: var(--clr_light);
+  color: var(--clr_accent);
+  display: flex;
+  justify-content: space-between;
+  /* NOTE: to adjust copyright text top and bottom gap here */
+  padding: 1% 6% 0% 6%;
+  align-items: center;
+}
+footer .copyright p {
+  font-size: var(--font_s);
+}
+/* Button 5 style (for Footer only): White text and perimeter */
+.btn5 {
+  font-size: var(--font_n);
+  padding: 0 15px;
+  border-radius: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid var(--clr_accent);
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr_accent);
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  transition: .3s;
+
+/* Gap adjustment (top,left/right only, but not bottomn because that one is adjust fr intro div -> padding: top/bottom) for button */
+  margin: 2.2% 5% 10% 6%;
+
+/* Below not required after i added padding to give equal left and right spacing regardless of text length */
+  /* width: 110px;
+  height: 25px; */
+}
+.btn5:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: var(--clr_primary);
+  top: -100%;
+  left: 0;
+  z-index: -1;
+  transition: .3s;
+}
+.btn5:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: var(--clr_primary);
+  top: -100%;
+  left: 0;
+  z-index: -1;
+  transition: .3s;
+}
+.btn5:hover {
+  color: var(--clr_dark);
+  border: 1px solid var(--clr_primary);
+  z-index: 1;
+}
+.btn5:hover:before {
+  top: 0;
+}
+
+.social .icon1 {
+  font-size: calc(var(--font_n)*2);
+  color: var(--clr_accent);
+  /* NOTE: to adjust social icon top/bottom/left/right gap here */
+  padding: 0 10px 7% 0;
+}
+.social .icon1:hover {
+  color: var(--clr_primary);
+}
+.social .icon2 {
+  font-size: calc(var(--font_n)*2);
+  color: var(--clr_accent);
+  /* NOTE: to adjust social icon top/bottom/left/right gap here */
+  padding: 0 10px 7% 0;
+}
+.social .icon2:hover {
+  color: var(--clr_primary);
+}
+.social .icon3 {
+  font-size: calc(var(--font_n)*2);
+  color: var(--clr_accent);
+  padding:0 0 7% 0;
+}
+.social .icon3:hover {
+  color: var(--clr_primary);
+}
+
+
+
+
+/* ===========================
+   START OF TABLET (IPAD) MODE 
+   =========================== */
+
+@media only screen and (min-width: 768px) {
+
+  /* TABLET SECTION: NAVBAR */
+  nav {
+    /* z-index: 99; */
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+    min-height: var(--font_n);
+    font-weight: bold;
+    /* this backgroundcolor is not required as using JS to change the color when scrolling down */
+    /* background: var(--clr_light); */
+    /* backgrd color helps to differential what to adjust on */
+    /* background: tomato; */
+    /* opacity: 0.6; */
+    /* background: rgba(0, 0, 0, 0.4); */
+  
+    /* position: fixed; */
+    top: 0;
+    /* width: 100%; */
+    transition: top 0.7s;
+    /* overflow: hidden; */
+    /* padding: 0 6% 0 6%; */
+    /* padding: 90px 10px; */
+    /* height: 50px; */
+  }
+  nav #logo {
+    background-color: transparent;
+    /* height = 55px (3.4375rem) and width = 125px (7.8125rem) */
+    height: 55px;
+    width: 125px;
+    margin: 0 0 0 6%;
+    /* JSnavbarshrink: RMB TO TURN THIS TRANSITION ON IF USING THIS JAVASCRIPT  */
+    /* transition: 0.4s; */
+    display: block;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* width: 60%; */
+    /* adjust the full height of the nav text BOX height */
+    /* height: 55px; */
+    /* adjust the left and right gap of nav bar  */
+    margin: 0 4% 0 0;
+    /* display: inline-flex; */
+    font-size: var(--font_n);
+    /* width: 0; */
+  }
+  nav ul li {
+    background-color: transparent;
+    padding: 0;
+  }
+  nav ul li a {
+    /* text-decoration: none; */
+    /* color: var(--clr_accent); */
+    /* display: block; */
+    /* adjust how big the gap of the text should fit in the box */
+    padding: 17px 17px 17px 17px;
+    /* font-size: var(--font_n); */
+    /* white-spece: text will not jump to next line if no space for it */
+    /* white-space: nowrap; */
+    /* border-radius: 4px; */ 
+    /* background: pink; */
+  }
+  nav ul li:first-child {
+    padding: 0;
+  }
+  nav ul li:last-child {
+    padding: 0;
+  }
+  .menu_toggle {
+    display: none;
+  }
+
+
+  /* TABLET SECTION: Slider buttons */
+  .sliderbtn {
+    width: 7%;
+  }
+
+
+  /* TABLET SECTION: Intro1 */
+  .intro1 {
+    width: 100%;
+    /* Image position and size adjustment */
+    background-image: url("IMG/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: 180%;
+    /* background-size: cover; */
+    /* Adjust image left/right */
+    /* background-position-x: center; */
+    /* Adjust image top/bottom */
+    background-position-y: -1.5rem;
+    /* background-position: bottom; */
+    /* Adjust image left/right/top/bottom */
+    /* background-position: 400px 100px; */
+    /* display: none; */
+  }
+  .container_image_on_mobile1 {
+    background: none;
+  }
+  .intro1 .text {
+    width: 100%;
+  }
+  .intro1 .text h1 {
+    padding: 8% 6% 0 6%;
+  }
+  .btn1 {
+  /* Gap adjustment (top,left/right only, but not bottom because that one is adjust fr intro div -> padding: top/bottom) for button */
+    /* margin: 2.2% 6% 10% 33%; */
+    margin: 1.2% 6% 10% 41%;
+  }
+
+
+  /* TABLET SECTION: Intro2 */
+  .intro2 .text {
+    width: 100%;
+  }
+  .intro2 .text h1 {
+    padding: 40% 44% 0 6%;
+  }
+  .btn2 {
+    margin: 1.2% 5% 5% 6%;
+  }
+
+
+  /* TABLET SECTION: Intro3 */
+  .intro3 .text h1 {
+    padding: 40% 7% 0 6%;
+  }
+  .intro3 .text h2 {
+    padding: 0.5% 65% 0% 6%;
+  }
+  .btn3 {
+  margin: 1.2% 5% 5% 6%; 
+  }
+
+
+  /* TABLET SECTION: Intro4 */
+   .overlay4 {
+    width: 50%;
+    /* shift the overlay to top/bottom/left/right */
+    margin: 0 0% 0 50%;
+    height: 100vh;
+  }
+  .intro4 .text .dfa_logo {
+    margin: 15% 0% 0 56.3%;
+  }
+  .intro4 .text h1 {
+    padding: 1% 6% 0 56%;
+  }
+  .intro4 .text h2 {
+    padding: 0.5% 6% 0% 56%;
+  }
+  .intro4 .text h3 {
+    padding: 8% 6% 0 56%;
+  }
+  .intro4 .text p {
+    padding: 2% 6% 0 56%;
+  }
+  .btn4 {
+  /* Gap adjustment (top,left/right only, but not bottomn because that one is adjust fr intro div -> padding: top/bottom) for button */
+    margin: 1.2% 5% 5% 56%;
+  }
+
+  
+  /* TABLET SECTION: WORDS THAT WARM OUR HEARTS */
+  .testimonial_title h1 {
+    /* Adjust left and right  gap here. This is to fix the white line on the right even when width is 100%. */
+    padding: 15% 6% 0 6%;
+  }
+  
+
+  /* TABLET SECTION: WHAT DO WE DO? */
+  .objective {
+    background-image: url("IMG/goldenr.png");
+    background-repeat: no-repeat;
+    background-size: 58%;
+    /* Adjust image left/right */
+    background-position-x: 110%;
+    /* Adjust image left/right/top/bottom */
+    background-position-y: bottom;
+  }
+  .objective p {
+    padding: 3% 51% 6% 6%;
+  }
+  .divider1_image_on_mobileATOM {
+    /* height is 0 bc to remove the mobile view image */
+    height: 0;
+    background-image: none;
+  }
+
+
+  /* TABLET SECTION: WHAT'S OUR SECERT? */
+  .secret {
+    background-color: var(--clr_dark);
+    background-image: url("IMG/dogshadow.JPG");
+    background-repeat: no-repeat;
+    background-size: 58%;
+    /* Adjust image left/right */
+    background-position-x: left;
+    /* Adjust image left/right/top/bottom */
+    background-position-y: bottom;
+  }
+  .secret h1 {
+    /* Adjust left and right  gap here. This is to fix the white line on the right even when width is 100%. */
+    padding: 9% 6% 0 48%;
+  }
+  .secret p {
+    /* Adjust only top and bottom. Left and right control in .recognition div */
+    padding: 3% 6% 6% 48%;
+    /* Font size, family, height to adjust in Typography. Only adjust the color below as default is --clr_accent */
+    color: var(--clr_light);
+  }
+  .divider2_image_on_mobile {
+    /* height is 0 bc to remove the mobile view image */
+    height: 0;
+    background-image: none;
+  }
+
+  /* TABLET SECTION: WHAT'S OUR SECERT? */
+  footer .info p {
+    /* Adjust only top and bottom. Left and right control in .recognition div */
+    padding: 1.5% 36% 0% 6%;
+  }
+
+}
+
+/* =====================
+   START OF DESKTOP MODE 
+   ===================== */
+
+@media only screen and (min-width: 1025px) {
+  
+  nav ul {
+    margin: 0 4.7% 0 0;
+  }
+  nav ul li a {
+    padding: 17px 20px 17px 20px;
+  }
+
+  .sliderbtn {
+    padding: calc(var(--font_n)/2) calc(var(--font_n)/3);
+    width: 6.6%;
+  }
+  .btntext {
+    display: contents;
+    /* padding: 1px 0px; */
+  }
+
+
+  /* DESKTOP SECTION: Intro1 */
+  .intro1 {
+    height: 100vh;
+    background-size: cover;
+    /* background: pink; */
+    /* background-size: 100%; */
+    background-position-y: 0;
+  }
+  .intro1 .text h1 {
+    padding: 4% 6% 0 6%;
+  }
+  .btn1 {
+    /* Gap adjustment (top,left/right only, but not bottom because that one is adjust fr intro div -> padding: top/bottom) for button */
+      margin: 1.2% 6% 10% 45%;
+    }
+
+  /* DESKTOP SECTION: Intro2 */
+  .intro2 {
+    height: 100vh;
+  }
+  .intro2 .text h1 {
+    padding: 20% 57% 0 6%;
+  }
+  .btn2 {
+    margin: 0.9% 5% 5% 6%;
+  }
+
+  /* DESKTOP SECTION: Intro3 */
+  .intro3 {
+    height: 100vh;
+  }
+  .intro3 .text h1 {
+    padding: 20% 7% 0 6%;
+  }
+  .intro3 .text h2 {
+    padding: 0.5% 70% 0% 6%;
+  }
+  .btn3 {
+    margin: 0.9% 5% 5% 6%;
+  }
+
+  /* DESKTOP SECTION: Intro4 */
+  .intro4 {
+    height: 100vh;
+  }
+  .intro4 .text .dfa_logo {
+    margin: 10% 0% 0 59%;
+  }
+  .intro4 .text h1 {
+    padding: 0.5% 8% 0 59%;
+  }
+  .intro4 .text h2 {
+    padding: 0.5% 8% 0% 59%;
+  }
+  .intro4 .text h3 {
+    padding: 8% 8% 0 59%;
+  }
+  .intro4 .text p {
+    padding: 2% 8% 0 59%;
+  }
+  .btn4 {
+  /* Gap adjustment (top,left/right only, but not bottomn because that one is adjust fr intro div -> padding: top/bottom) for button */
+    margin: 0.9% 10% 5% 59%;
+  }
+
+
+  /* DESKTOP SECTION: NEWS title */
+  .news_title h1 {
+    padding: 8% 6% 3.5% 6%;
+  }    
+
+
+  /* DESKTOP SECTION: WORDS THAT WARM OUR HEARTS */
+  .testimonial_title h1 {
+    padding: 10% 6% 0 6%;
+  }
+
+
+  /* DESKTOP SECTION: WHAT DO WE DO? */  
+  .objective {
+    background-size: 30%;
+    /* Adjust image left/right */
+    background-position-x: 85%;
+    /* Adjust image left/right/top/bottom */
+    background-position-y: bottom;
+  }
+  .objective h1 {
+    padding: 6% 6% 0 6%;
+  }
+  .objective p {
+    padding: 3% 52% 6% 6%;
+  }
+
+
+  /* DESKTOP SECTION: WHAT'S OR SECRET? */  
+  .secret {
+    background-size: 50%;
+    /* Adjust image left/right */
+    background-position-x: left;
+    /* Adjust image left/right/top/bottom */
+    background-position-y: bottom;
+  }
+  .secret h1 {
+    /* Adjust left and right  gap here. This is to fix the white line on the right even when width is 100%. */
+    padding: 6% 6% 0 48%;
+  }
+
+
+
+  /* DESKTOP SECTION: FOOTER */  
+  footer .info h1  {
+    padding: 5% 6% 0 6%;
+  }
+  footer .info p {
+    padding: 0.5% 61% 0% 6%;
+  }
+  .btn5 {
+  /* Gap adjustment (top,left/right only, but not bottomn because that one is adjust fr intro div -> padding: top/bottom) for button */
+    margin: 1% 5% 5% 6%;
+
+  }
+
+}
