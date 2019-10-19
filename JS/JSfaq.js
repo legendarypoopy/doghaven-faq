@@ -1,3 +1,7 @@
+// =====================================================================================================
+// ANSWER 1 (below) is the only different format from the rest because the answer is displayed on screen
+// =====================================================================================================
+
 var qnToggle1 = document.querySelector('.qn1');
 var answerToggle1 = document.querySelector('.answer1');
 var expand1 = document.querySelector('.expand1');
@@ -18,21 +22,27 @@ function toggleAnswer1(){
   // contract.style.display = "contents";
 
 
-  if (answerToggle1.style.display === "block") {
-    answerToggle1.style.display = "none";
-  } else {
+  // Answer 1 is exception case because it is slightly different from the rest (answer already displayed on screen)
+  if (answerToggle1.style.display === "none") {
     answerToggle1.style.display = "block";
+  } else {
+    answerToggle1.style.display = "none";
   }
 
-  if (expand1.style.display === "none") {
-    expand1.style.display = "contents";
-    contract1.style.display = "none";
-  } else {
+  if (expand1.style.display === "contents") {
     expand1.style.display = "none";
     contract1.style.display = "contents";
+  } else {
+    expand1.style.display = "contents";
+    contract1.style.display = "none";
   }
 }
 
+
+
+// =========================================================================================
+// ANSWER 2 onwards (below) are all the same format because the answer is hiddened on screen
+// =========================================================================================
 
 var qnToggle2 = document.querySelector('.qn2');
 var answerToggle2 = document.querySelector('.answer2');
