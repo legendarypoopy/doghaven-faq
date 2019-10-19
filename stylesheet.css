@@ -255,7 +255,7 @@ nav ul li:last-child {
   padding: 4% 1% 4% 1%;
   color: var(--clr_primary);
   font-weight: bold;
-  font-size: var(--font_m);
+  /* font-size: var(--font_m); */
   cursor: pointer;
   /* background: pink; */
 }
@@ -264,7 +264,7 @@ nav ul li:last-child {
 }
 .faq_container .answer1 {
   padding: 0% 6% 0% 6%;
-  font-size: var(--font_m);
+  /* font-size: var(--font_m); */
   display: none;
 }
 .expand1 {
@@ -280,7 +280,7 @@ nav ul li:last-child {
   padding: 4% 1% 4% 1%;
   color: var(--clr_primary);
   font-weight: bold;
-  font-size: var(--font_m);
+  /* font-size: var(--font_m); */
   cursor: pointer;
   /* background: pink; */
 }
@@ -289,7 +289,7 @@ nav ul li:last-child {
 }
 .faq_container .answer2 {
   padding: 0% 6% 0% 6%;
-  font-size: var(--font_m);
+  /* font-size: var(--font_m); */
   display: none;
 }
 .expand2 {
