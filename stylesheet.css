@@ -249,8 +249,11 @@ nav ul li:last-child {
   padding: 2% 0 2% 0;  
 }
 
-/* QN1 */
-.faq_container .qn1 {
+
+/*-------------------------------------------------------------------------------------------
+  GROUP ALL QN+ANSWER CSS AS ONE CLASS: .qn_all, .expand_all, .contract_all, .answer__all CSS
+  ------------------------------------------------------------------------------------------- */
+.faq_container .qn_all {
   margin: 0 5%;
   padding: 2% 1% 2% 1%;
   /* color: var(--clr_primary); */
@@ -259,47 +262,83 @@ nav ul li:last-child {
   cursor: pointer;
   /* background: pink; */
 }
-.faq_container .qn1:hover {
+.faq_container .qn_all:hover {
   background: white;
 }
-.faq_container .answer1 {
+.expand_all {
+  /* display: none; */
+}
+.contract_all {
+  display: none;
+}
+.faq_container .answer__all {
   padding: 2% 6% 2% 6%;
   /* font-size: var(--font_m); */
-  display: none;
+  /* display: none; */
   /* background: lightpink; */
 }
-.expand1 {
-  /* display: none; */
-}
-.contract1 {
-  display: none;
-}
 
-/* QN2 */
-.faq_container .qn2 {
-  margin: 0 5%;
-  padding: 2% 1% 2% 1%;
-  /* color: var(--clr_primary); */
-  font-weight: bold;
-  /* font-size: var(--font_m); */
-  cursor: pointer;
-  /* background: pink; */
-}
-.faq_container .qn2:hover {
-  background: white;
-}
-.faq_container .answer2 {
+
+/*----------------------------------------------------
+  GROUP ALL image_title CSS AS ONE CLASS: .image_title
+  ---------------------------------------------------- */
+.image_title {
   padding: 2% 6% 2% 6%;
-  /* font-size: var(--font_m); */
-  display: none;
-}
-.expand2 {
-  /* display: none; */
-}
-.contract2 {
-  display: none;
 }
 
+
+/* MOBILE SECTION: Matted dog image */
+.matted_dog {
+  height: 300px;
+  background-color: var(--clr_primary);
+  background-image: url("IMG/matted\ dog.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 6% 6% 2% 6%;
+  /* background-position-y: bottom; */
+  /* background-size: 60%; */
+  /* Adjust image left/right */
+  /* background-position-x: 90%; */
+  /* Adjust image left/right/top/bottom */
+  /* background-position: 400px 100px; */
+}
+
+
+/* MOBILE SECTION: Nails */
+.nails {
+  height: 230px;
+  background-color: var(--clr_light);
+  background-image: url("IMG/nails.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 6% 6% 2% 6%;
+  /* background-position-y: bottom; */
+  /* background-size: 60%; */
+  /* Adjust image left/right */
+  /* background-position-x: 90%; */
+  /* Adjust image left/right/top/bottom */
+  /* background-position: 400px 100px; */
+}
+
+
+/* MOBILE SECTION: Anal gland */
+.anal_gland {
+  height: 230px;
+  background-color: var(--clr_light);
+  background-image: url("IMG/anal\ gland.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 6% 6% 2% 6%;
+  /* background-position-y: bottom; */
+  /* background-size: 60%; */
+  /* Adjust image left/right */
+  /* background-position-x: 90%; */
+  /* Adjust image left/right/top/bottom */
+  /* background-position: 400px 100px; */
+}
 
 
 
