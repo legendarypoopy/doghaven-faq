@@ -10,6 +10,7 @@
   --clr_dark: black;
   --clr_light: white;
   --clr_shade: #F3F3F3;
+  --clr_logogreen: #8DC73F;
 
   --ff_title: 'Raleway', sans-serif;
   --ff_serif: 'Open Sans', sans-serif;
@@ -95,21 +96,15 @@ nav ul li {
   }
 nav ul li a {
   color: var(--clr_accent);
-  text-shadow:
-		/* -1px -1px 0 rgba(255,255,255,0.5), */
-		1px -1px 0 rgba(255,255,255,0.5);
-		/* -1px 1px 0 rgba(255,255,255,0.5), */
-		/* 1px 1px 0 rgba(255,255,255,0.5); */
-  /* text-shadow: 0px 0px 30px white,0px 0px 30px white,0px 0px 30px white,0px 0px 10px white,0px 0px 10px white; */
   display: block;
   white-space: nowrap;
   padding: 3% 6%;
   text-decoration: none;
-  /* font-weight: 900; */
 }
 nav ul li a:hover {
-  color: var(--clr_primary);
-  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  /* background: rgba(255, 255, 255, 0.8); */
+  background: var(--clr_shade);
 }
 /* This is to give extra white space at the top when toggle menu */
 nav ul li:first-child {
@@ -118,6 +113,13 @@ nav ul li:first-child {
 /* This is to give extra white space at the bottom to cover entire screen when toggle menu */
 nav ul li:last-child {
   padding: 0 0 100% 0;
+}
+.currentnav {
+  cursor: default;
+  border-left: 2px solid var(--clr_accent);
+}
+.currentnav:hover {
+  color: inherit;
 }
 .menu_toggle {
   position: absolute;
@@ -134,15 +136,22 @@ nav ul li:last-child {
 
 /* MOBILE SECTION: INTRO */
 .intro {
-  width: 100%;
-  background: var(--clr_primary);
+  background: var(--clr_logogreen);
+}
+.logo_green {
+  height: 50px;
+  background-image: url("IMG/logo_green.JPG");
+  background-repeat: no-repeat;
+  background-size: 26%;
+  margin: 0% 0 0 6%;
+  background-position-y: 3px;
 }
 .intro h1 {
   color: var(--clr_light);
-  padding: 14% 6% 3% 6%;
+  padding: 5.5% 6% 2% 6%;
 }
 .intro p {
-  padding: 3% 6% 10% 6%;
+  padding: 0% 6% 9% 6%;
   color: var(--clr_light);
 }
 
@@ -519,6 +528,13 @@ footer .copyright p {
   nav ul li:last-child {
     padding: 0;
   }
+  .currentnav {
+    border-left: none;
+    text-decoration: overline;
+  }
+  .currentnav:hover {
+    background: transparent;
+  }
   .menu_toggle {
     display: none;
   }
@@ -651,13 +667,11 @@ footer .copyright p {
 
   /* DESKTOP SECTION: INTRO */
   .intro h1 {
-    /* width: 100%; */
-    /* color: var(--clr_light); */
-    padding: 10% 6% 1% 6%;
+    padding: 8% 6% 1% 6%;
     text-align: center;
   }
   .intro p {
-    padding: 0% 6% 7% 6%;
+    padding: 0% 6% 6% 6%;
     text-align: center;
   }
 
