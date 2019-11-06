@@ -66,21 +66,18 @@ nav {
   position: fixed;
   z-index: 99;
   width: 100%;
-  /* background: red; */
   display: flex;
   flex-direction: column;
-  /* background: orange; */
   font-weight: 500;
   }
-nav #logo {
+  nav #logo {
   background-color: var(--clr_shade);
   height: 100px;
+  width: 220px;
   background-image: url("IMG/logo.png");
   background-repeat: no-repeat;
   background-size: contain;
-  /* Cannot use margin bc this is background image, so will have a space when i add background color behind
-  so have to use background-position-x to align the logo  */
-  background-position-x: 13%;
+  margin: 0% 0 0 6%;
   display: none;
 }
 nav ul {
@@ -116,7 +113,7 @@ nav ul li:last-child {
 }
 .currentnav {
   cursor: default;
-  border-left: 2px solid var(--clr_accent);
+  border-left: 5px solid var(--clr_accent);
 }
 .currentnav:hover {
   color: inherit;
@@ -134,23 +131,26 @@ nav ul li:last-child {
 }
 
 
+
 /* MOBILE SECTION: INTRO */
 .intro {
   background: var(--clr_logogreen);
+  position: relative;
 }
-.logo_green {
-  height: 50px;
-  background-image: url("IMG/logo_green.JPG");
+#logo_greenbg {
+  position: absolute;
+  height: 42px;
+  width: 100px;
+  background-image: url("IMG/logo_greenbg.JPG");
   background-repeat: no-repeat;
-  background-size: 26%;
-  margin: 0% 0 0 6%;
-  background-position-y: 3px;
+  background-size: contain;
+  margin: 0.5% 0 0 6%;
 }
-.intro h1 {
+.intro_header {
   color: var(--clr_light);
-  padding: 6% 6% 2% 6%;
+  padding: 20% 6% 1% 6%;
 }
-.intro p {
+.intro_body {
   padding: 0% 6% 9% 6%;
   color: var(--clr_light);
 }
@@ -542,13 +542,16 @@ footer .copyright p {
 
 
   /* TABLET SECTION: INTRO */
-  .intro h1 {
-    /* color: var(--clr_light); */
-    padding: 14% 6% 3% 6%;
+  #logo_greenbg {
+    background-image: none;
   }
-  .intro p {
+  .intro_header {
+    padding: 14% 6% 0.5% 6%;
+    text-align: center;
+  }
+  .intro_body {
     padding: 0% 6% 7% 6%;
-    /* color: var(--clr_light); */
+    text-align: center;
   }
 
 
@@ -666,13 +669,11 @@ footer .copyright p {
 
 
   /* DESKTOP SECTION: INTRO */
-  .intro h1 {
-    padding: 8% 6% 1% 6%;
-    text-align: center;
+  .intro_header {
+    padding: 8% 6% 0.5% 6%;
   }
-  .intro p {
-    padding: 0% 6% 6% 6%;
-    text-align: center;
+  .intro_body {
+    padding: 0% 6% 5% 6%;
   }
 
 
